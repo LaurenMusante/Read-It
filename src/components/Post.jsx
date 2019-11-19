@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import LikeButton from './LikeButton';
 
 function Post(props){
     
@@ -19,7 +20,7 @@ function Post(props){
       <h5>{props.author}</h5>
       <p>{props.content}</p>
       <p>Likes: {props.likes}</p>
-      <button> >Like</button>
+      <LikeButton />
       <button>Dislike</button>
       <hr/>
     </div>

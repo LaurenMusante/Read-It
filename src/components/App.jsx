@@ -14,15 +14,8 @@ class App extends React.Component {
             count: 0
         };
         this.handleAddingPostToList = this.handleAddingPostToList.bind(this);
-        this.handleIncrement = this.handleIncrement.bind(this);
     }
 
-    handleIncrement() {
-        let newCount = this.state.count +1;
-        this.setState({
-            count: newCount
-        })
-    }
 
     handleAddingPostToList(newPost) {
         var newMasterPostList = this.state.masterPostList.slice();
@@ -38,7 +31,7 @@ class App extends React.Component {
                     <Route exact path='/' render={() => <PostList postList={this.state.masterPostList}/>}/>
                     <Route path='/newpost' render={() => <NewPostForm onNewPostCreation={this.handleAddingPostToList}/>}/>
                 </Switch>
-                <button onClick={this.handleIncrement}>Likes: {this.state.count} </button>
+                <button>Likes:</button>
 
             </div>
         );
