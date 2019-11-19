@@ -19,9 +19,7 @@ function Post(props){
       <h3>{props.title}</h3>
       <h5>{props.author}</h5>
       <p>{props.content}</p>
-      <p>Likes: {props.likes}</p>
       <LikeButton />
-      <button>Dislike</button>
       <hr/>
     </div>
   );

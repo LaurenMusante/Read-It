@@ -6,6 +6,7 @@ class LikeButton extends React.Component {
         count: 0
     };
     this.handleIncrement = this.handleIncrement.bind(this);
+    this.handleDecrement = this.handleDecrement.bind(this);
 }
 
 handleIncrement() {
@@ -14,10 +15,19 @@ handleIncrement() {
         count: newCount
     })
 };
+
+handleDecrement() {
+    let newCount=this.state.count -1;
+    this.setState({
+        count: newCount
+    })
+};
     render(){
         return (
             <div>
-                <button onClick={this.handleIncrement}>Likes: {this.state.count} </button>
+                <p> Likes: {this.state.count}</p>
+                <button onClick={this.handleIncrement}> LIKE </button>
+                <button onClick={this.handleDecrement}> DISLIKE </button>
             </div>
         );
     }

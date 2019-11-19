@@ -31,7 +31,6 @@ class App extends React.Component {
                     <Route exact path='/' render={() => <PostList postList={this.state.masterPostList}/>}/>
                     <Route path='/newpost' render={() => <NewPostForm onNewPostCreation={this.handleAddingPostToList}/>}/>
                 </Switch>
-                <button>Likes:</button>
 
             </div>
         );
