@@ -3,8 +3,6 @@ import PropTypes from 'prop-types';
 import { v4 } from 'uuid';
 import { Redirect } from 'react-router-dom';
 
-
-
 class NewPostForm extends React.Component {
 
     constructor(props) {
@@ -18,10 +16,6 @@ class NewPostForm extends React.Component {
         this.handleNewPostFormSubmission = this.handleNewPostFormSubmission.bind(this);
     }
 
-
-
-
-
     handleNewPostFormSubmission(event) {
         event.preventDefault();
         this.props.onNewPostCreation({ author: this.state._author.value, title: this.state._title.value, content: this.state._content.value, likes: 0, id: v4() });
@@ -34,7 +28,6 @@ class NewPostForm extends React.Component {
 
         return (
             <div>
-                <h1> Create a Post </h1>
                 {this.state.toHome ? <Redirect to='/' /> : ''}
                 <form onSubmit={this.handleNewPostFormSubmission}>
                     <input

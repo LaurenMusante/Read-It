@@ -5,7 +5,7 @@ function Header(){
   return (
     <div>
       <h1>Read-It</h1>
-      <Link to="/">Home</Link> | <Link to="/newpost"> Post</Link>
+      <Link to="/">Home</Link> | <Link to="/newpost"> Create a Post</Link>
     </div>
   );
 }
