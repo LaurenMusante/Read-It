@@ -10,6 +10,7 @@ function Post(props){
         {`
           div {
             background-color: yellow;
+            width: 400px;
           }
           div:hover {
             background-color: green;
