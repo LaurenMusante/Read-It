@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Post(props){
+    
   return (
     <div>
       <style jsx>
@@ -17,7 +18,8 @@ function Post(props){
       <h3>{props.title}</h3>
       <h5>{props.author}</h5>
       <p>{props.content}</p>
-      <button>Like</button>
+      <p>Likes: {props.likes}</p>
+      <button> >Like</button>
       <button>Dislike</button>
       <hr/>
     </div>
